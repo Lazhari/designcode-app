@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Logo = ({ image, text }) => (
 	<Container>
-		<Image source={image} resize="contains" />
+		<Image source={image} resizeMode="contain" />
 		<Text>{text}</Text>
 	</Container>
 );
@@ -11,12 +11,13 @@ const Logo = ({ image, text }) => (
 export default Logo;
 
 const Container = styled.View`
-	flex-direction: row;
-	background: white;
 	height: 60px;
 	padding: 12px 16px 12px;
+	background: white;
+	flex-direction: row;
 	border-radius: 10px;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+	flex-direction: row;
 	align-items: center;
 	margin: 0 8px;
 `;
