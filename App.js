@@ -1,25 +1,30 @@
 import React from 'react';
-import { ScrollView, SafeAreaView } from 'react-native';
+import { ScrollView, SafeAreaView, TouchableOpacity } from 'react-native';
 import styled from 'styled-components';
 
 import { NotificationIcon } from './components/Icons';
 import Card from './components/Card';
 import Logo from './components/Logo';
 import Course from './components/Course';
+import Menu from './components/Menu';
 
 export default class App extends React.Component {
 	render() {
 		return (
 			<Container>
+				<Menu />
 				<SafeAreaView>
 					<ScrollView>
 						<TitleBar>
 							<Avatar source={require('./assets/avatar.jpg')} />
 							<Title>Welcome Back,</Title>
 							<Name>Med</Name>
-							<NotificationIcon
+							<TouchableOpacity
+								onPress={this.toggleMenu}
 								style={{ position: 'absolute', right: 20, top: 5 }}
-							/>
+							>
+								<NotificationIcon />
+							</TouchableOpacity>
 						</TitleBar>
 						<ScrollView
 							style={{
