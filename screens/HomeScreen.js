@@ -15,6 +15,7 @@ import Card from '../components/Card';
 import Logo from '../components/Logo';
 import Course from '../components/Course';
 import Menu from '../components/Menu';
+import Avatar from '../components/Avatar';
 
 function mapDispatchToProps(dispatch) {
 	return {
@@ -26,7 +27,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(state) {
-	return { action: state.action };
+	return { action: state.action, name: state.name };
 }
 
 class HomeScreen extends React.Component {
@@ -82,13 +83,13 @@ class HomeScreen extends React.Component {
 						<ScrollView>
 							<TitleBar>
 								<TouchableOpacity
-									style={{ position: 'absolute', top: 0, left: 0 }}
+									style={{ position: 'absolute', top: 0, left: 20 }}
 									onPress={this.props.openMenu}
 								>
-									<Avatar source={require('../assets/avatar.jpg')} />
+									<Avatar />
 								</TouchableOpacity>
 								<Title>Welcome Back,</Title>
-								<Name>Med</Name>
+								<Name>{this.props.name}</Name>
 								<NotificationIcon
 									style={{ position: 'absolute', right: 20, top: 5 }}
 								/>
@@ -174,16 +175,16 @@ const TitleBar = styled.View`
 	padding-left: 80px;
 `;
 
-const Avatar = styled.Image`
-	width: 44px;
-	height: 44px;
-	background: black;
-	border-radius: 22px;
-	margin-left: 20px;
-	/* position: absolute;
-	top: 0;
-	left: 0; */
-`;
+// const Avatar = styled.Image`
+// 	width: 44px;
+// 	height: 44px;
+// 	background: black;
+// 	border-radius: 22px;
+// 	margin-left: 20px;
+// 	/* position: absolute;
+// 	top: 0;
+// 	left: 0; */
+// `;
 
 const logos = [
 	{
