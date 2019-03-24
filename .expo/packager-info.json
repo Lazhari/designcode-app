@@ -1,10 +1,10 @@
 {
-  "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 61466,
-  "expoServerNgrokUrl": "https://57-j4j.molazhari.designcode-app.exp.direct",
-  "packagerNgrokUrl": "https://packager.57-j4j.molazhari.designcode-app.exp.direct",
-  "ngrokPid": 61481,
+  "devToolsPort": 19003,
+  "expoServerPort": 19004,
+  "packagerPort": 19005,
+  "packagerPid": 60429,
+  "expoServerNgrokUrl": "https://57-j4j.anonymous.designcode-app.exp.direct",
+  "packagerNgrokUrl": "https://packager.57-j4j.anonymous.designcode-app.exp.direct",
+  "ngrokPid": 60466,
   "webpackServerPort": null
 }
