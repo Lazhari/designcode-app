@@ -230,18 +230,6 @@ const Message = styled.Text`
   font-size: 15px;
   font-weight: 500;
 `;
-
-// const Avatar = styled.Image`
-// 	width: 44px;
-// 	height: 44px;
-// 	background: black;
-// 	border-radius: 22px;
-// 	margin-left: 20px;
-// 	/* position: absolute;
-// 	top: 0;
-// 	left: 0; */
-// `;
-
 const logos = [
   {
     image: require("../assets/logo-framerx.png"),
@@ -266,37 +254,6 @@ const logos = [
   {
     image: require("../assets/logo-sketch.png"),
     text: "Sketch"
-  }
-];
-
-const cards = [
-  {
-    title: "React Native for Designers",
-    image: require("../assets/background11.jpg"),
-    subtitle: "React Native",
-    caption: "1 of 12 sections",
-    logo: require("../assets/logo-react.png")
-  },
-  {
-    title: "Styled Components",
-    image: require("../assets/background12.jpg"),
-    subtitle: "React Native",
-    caption: "2 of 12 sections",
-    logo: require("../assets/logo-react.png")
-  },
-  {
-    title: "Props and Icons",
-    image: require("../assets/background13.jpg"),
-    subtitle: "React Native",
-    caption: "3 of 12 sections",
-    logo: require("../assets/logo-react.png")
-  },
-  {
-    title: "Static Data and Loop",
-    image: require("../assets/background14.jpg"),
-    subtitle: "React Native",
-    caption: "4 of 12 sections",
-    logo: require("../assets/logo-react.png")
   }
 ];
 
