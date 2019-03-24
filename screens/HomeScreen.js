@@ -9,8 +9,6 @@ import {
 } from "react-native";
 import styled from "styled-components";
 import { connect } from "react-redux";
-import gql from "graphql-tag";
-import { Query } from "react-apollo";
 
 import { NotificationIcon } from "../components/Icons";
 import Card from "../components/Card";
@@ -18,24 +16,7 @@ import Logo from "../components/Logo";
 import Course from "../components/Course";
 import Menu from "../components/Menu";
 import Avatar from "../components/Avatar";
-
-const CardsQuery = gql`
-  {
-    cards {
-      id
-      title
-      subtitle
-      caption
-      status
-      image {
-        url
-      }
-      logo {
-        url
-      }
-    }
-  }
-`;
+import CardsQuery from "../components/CardsQuery";
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -142,7 +123,7 @@ class HomeScreen extends React.Component {
                 style={{ paddingBottom: 30 }}
                 showsHorizontalScrollIndicator={false}
               >
-                <Query query={CardsQuery}>
+                <CardsQuery>
                   {({ loading, error, data }) => {
                     if (loading) {
                       return <Message>Loading...</Message>;
@@ -164,7 +145,7 @@ class HomeScreen extends React.Component {
                       </TouchableOpacity>
                     ));
                   }}
-                </Query>
+                </CardsQuery>
               </ScrollView>
               <Subtitle>Popular Courses</Subtitle>
               {courses.map(course => (
