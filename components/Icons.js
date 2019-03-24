@@ -1,5 +1,6 @@
-import React from 'react';
-import Svg, { G, Path, Defs, ClipPath } from 'react-native-svg';
+import React from "react";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import Svg, { G, Path, Defs, ClipPath } from "react-native-svg";
 
 export const NotificationIcon = props => (
   <Svg width={24} height={24} fill="none" {...props}>
